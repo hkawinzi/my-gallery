@@ -1,6 +1,6 @@
+{% load bootstrap3 %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     {% if title %}
@@ -8,10 +8,17 @@
     {% else %}
         <title> My galley </title>
     {% endif %}
+
+    {% block styles %}
+        {% bootstrap_css %} <!--link to the bootstrap CSS file.-->
+    {% endblock %}
 </head>
 
 <body>
-
+    {% block scripts %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {% boostrap_javascript %}
+    {% endblock %}
 </body>
 
 </html>
