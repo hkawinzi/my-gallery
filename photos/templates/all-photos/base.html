@@ -2,6 +2,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     {% if title %}
@@ -11,15 +12,15 @@
     {% endif %}
 
     {% block styles %}
-        {% bootstrap_css %} 
-        <link rel="stylesheet" href="{% static 'css/basephotos.css' %}">
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/basephotos.css' %}">
     {% endblock %}
 </head>
 
 <body>
     {% include "navbar.html" %}
     {% block scripts %}
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     {% boostrap_javascript %}
     {% endblock %}
 </body>
