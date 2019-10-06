@@ -19,3 +19,5 @@ class Picture(models.Model):
     image_description = models.TextField()
     image_location = models.ForeignKey(Image)
     image_category = models.ForeignKey(Image)
+    tags = models.ManyToManyField(tags)
+    pub_date = models.DateTimeField(auto_now_add=True)
