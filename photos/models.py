@@ -5,13 +5,17 @@ class Image(models.Model):
     first_name = models.CharField(max_length =30)
     last_name = models.CharField(max_length =30)
 
+    def __str__(self):
+        return self.first_name
+
 class tags(models.Model):
-    name = models.CharField(max_length=300)
-    
+    name = models.CharField(max_length =30)
+
     def __str__(self):
         return self.name
 
-class Comment(models.Model):
-    name = models.CharField(max_length=300)
-    text = models.TextField()
-    pub_date = models.DateTimeField(auto_now_add=True)
+class Picture(models.Model):
+    image_name = models.CharField(max_length = 300)
+    image_description = models.TextField()
+    image_location = models.ForeignKey(Image)
+    image_category = models.ForeignKey(Image)
