@@ -1,13 +1,9 @@
 from django.db import models
 
 # Create your models here.
-
-
 class Image(models.Model):
-    image_name = models.CharField(max_length=300)
-    image_description = models.TextField()
-    image_location = models.CharField(max_length=300)
-    image_category = models.CharField(max_length=300)
+    first_name = models.CharField(max_length =30)
+    last_name = models.CharField(max_length =30)
 
 class tags(models.Model):
     name = models.CharField(max_length=300)

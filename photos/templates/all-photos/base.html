@@ -1,28 +1,27 @@
 {% load bootstrap3 %}
-{% load static %}
+{% load static%}
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    {% if title %}
-    <title>My galley - {{title}}</title>
-    {% else %}
-        <title> My galley </title>
-    {% endif %}
+  <meta charset="utf-8">
 
-    {% block styles %}
+  {% if title %}
+  <title>My gallery - {{title}}</title>
+  {% else %}
+    <title> My gallery </title>
+  {% endif %}
+
+  {% block styles %}
     {% bootstrap_css %}
     <link rel="stylesheet" href="{% static 'css/basephotos.css' %}">
-    {% endblock %}
-</head>
+  {% endblock %}
 
+</head>
 <body>
     {% include "navbar.html" %}
     {% block scripts %}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    {% boostrap_javascript %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     {% bootstrap_javascript %}
     {% endblock %}
 </body>
-
 </html>
