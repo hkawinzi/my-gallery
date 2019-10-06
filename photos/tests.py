@@ -14,6 +14,6 @@ class ImageTestClass(TestCase):
 
  # Testing Save Method
     def test_save_method(self):
-        self.james.save_editor()
-        editors = Editor.objects.all()
-        self.assertTrue(len(editors) > 0)
+        self.lynn.save_image()
+        images = Image.objects.all()
+        self.assertTrue(len(images) > 0)
