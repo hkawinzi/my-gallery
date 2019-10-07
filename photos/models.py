@@ -8,6 +8,10 @@ class Image(models.Model):
     def __str__(self):
         return self.first_name
 
+    def save_image(self):
+        self.save()
+
+
 class tags(models.Model):
     name = models.CharField(max_length =30)
 
@@ -15,9 +19,9 @@ class tags(models.Model):
         return self.name
 
 class Picture(models.Model):
-    image_name = models.CharField(max_length = 300)
-    image_description = models.TextField()
-    image_location = models.ForeignKey(Image)
-    image_category = models.ForeignKey(Image)
+    picture_name = models.CharField(max_length = 300)
+    picture_description = models.TextField()
+    picture_location = models.ForeignKey(Image)
+    
     tags = models.ManyToManyField(tags)
     pub_date = models.DateTimeField(auto_now_add=True)
