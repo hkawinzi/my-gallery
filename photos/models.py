@@ -25,3 +25,9 @@ class Image(models.Model):
     
     tags = models.ManyToManyField(tags)
     pub_date = models.DateTimeField(auto_now_add=True)
+    image_image = models.ImageField(upload_to = 'images/')
+
+    @classmethod
+    def search_by_title(cls,search_term):
+        news = cls.objects.filter(title__icontains=search_term)
+        return photos
