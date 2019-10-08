@@ -26,7 +26,7 @@ MIT LICENSE [2019]
 
 
 # bugs
-
+A user can only view my images .
 ## contact info
 if you have any queries you can email me "happinesskawinzi@gmail.com"
 
